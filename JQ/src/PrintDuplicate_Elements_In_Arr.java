@@ -3,8 +3,9 @@ import java.util.HashMap;
 public class PrintDuplicate_Elements_In_Arr {
     public static void main(String[] args) {
         int arr[] = {1, 2, 3, 1, 2, 5, 6, 69, 2, 10, 11};
-        printDuplicates(arr);
+       // printDuplicates(arr);
         String s = "abbcdefacboipaly";
+        MajorityString(s);
     }
 
     public static void printDuplicates(int arr[]) {
@@ -18,7 +19,6 @@ public class PrintDuplicate_Elements_In_Arr {
                 hm.put(arr[i], 1);
             }
         }
-
         for (Integer key : hm.keySet()) {
             if (hm.get(key) > 1) {
                 System.out.println(key);
@@ -33,6 +33,11 @@ public class PrintDuplicate_Elements_In_Arr {
             if (hm2.containsKey(words[i])) {
                 hm2.put((int) words[i],hm2.get(words[i]));
 
+            }
+        }
+        for (Integer key : hm2.keySet()) {
+            if (hm2.get(key)>1) {
+                System.out.println(key);
             }
         }
     }
